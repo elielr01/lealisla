@@ -1,0 +1,34 @@
+The BBClone team are:
+---------------------
+
+Olliver Wichmann:
+olliver [ d o t ] wichmann [ a t ] gmx [ d o t ] net
+(maintainer, website and forum administration)
+
+Joachim Kuwan:
+jkuwan [ a t ] t [ d a s h ] online [ d o t ] de
+(developer, server and forum administration)
+
+Dave Higgins:
+dave [ a t ] higginsnet [ d o t ] com
+(developer, documentation and forum administration)
+
+Rob Farnell:
+rjfarnell [ a t ] msn [ d o t ] com
+(public relations, forum moderation)
+
+
+Retired team members:
+---------------------
+
+Amaury Amblard-Ladurantie:
+amaury [ a t ] mandrakesoft [ d o t ] com
+(original author)
+
+Laurent Jacques:
+ljacques [ a t ] fyma [ d o t ] ucl [ d o t ] ac [ d o t ] be
+(former maintainer)
+
+Matthijs van Wageningen:
+matthys [ a t ] vanwageningen [ d o t ] net
+(former developer)

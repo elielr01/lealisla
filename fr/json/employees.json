@@ -1,0 +1,42 @@
+[
+  {
+    "idempleado": "7",
+    "nombre": "Carlos Leal-Isla Garza",
+    "foto": "NgT7GwL1fK.png",
+    "fotoCV": "46d0wzyQVm.jpeg",
+    "idTipo": "1",
+    "email": "cli@lih.mx"
+  },
+  {
+    "idempleado": "8",
+    "nombre": "Zita Horváth",
+    "foto": "aQMd6p42bK.png",
+    "fotoCV": "nzpfwdoRIM.jpeg",
+    "idTipo": "1",
+    "email": "zh@lih.mx"
+  },
+  {
+    "idempleado": "9",
+    "nombre": "Rafael Ibarra Garza",
+    "foto": "SM7JZbWw3x.png",
+    "fotoCV": "CxDPGlJBka.jpeg",
+    "idTipo": "3",
+    "email": "ribarra@lih.mx"
+  },
+  {
+    "idempleado": "11",
+    "nombre": "Guillermo Terán Esparza",
+    "foto": "ZmTrV5YEPW.png",
+    "fotoCV": "6OcRti9Af1.jpeg",
+    "idTipo": "2",
+    "email": "gteran@lih.mx"
+  },
+  {
+    "idempleado": "16",
+    "nombre": "Alejandro Leal Isla Macías",
+    "foto": "fSYptLlONC.png",
+    "fotoCV": "sjVCzkRDtK.jpeg",
+    "idTipo": "1",
+    "email": "In memoriam (1941-2016)"
+  }
+]

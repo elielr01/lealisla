@@ -1,19 +1,3 @@
-<?php
-include("../admin/lib/conex.php");
-$db= Conectarse();
-$all_recs = array();
-$sql = "SELECT * FROM empleado ORDER BY idTipo, nombre";
-$q = $db->prepare($sql);
-$q->execute(array());
- while ($row = $q->fetch()){
-  $all_recs[]=array(
-    'id'       => $row['idempleado'],
-    'nombre'   => $row['nombre'],
-    'foto'     => $row['foto'],
-    'tipo'     => $row['idTipo']
-  );
-}
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -52,71 +36,75 @@ $q->execute(array());
 
 <body>
 
+
+  <div style="display:none" class="overlay_bg text-center">
+    <p class="overlay_content">Enviando...</p>
+  </div>
+
   <div class="container">
     <?php include('common/header.php')?>
     <script>
-      document.getElementById('navMembers').classList.add("active");
+      document.getElementById('navOpportunities').classList.add("active");
     </script>
   </div>
 
-
-
-  <div id="main" class="container">
-    <div class="row">
-      <hr>
-      <h1 class="text-center">
-        Nuestros estudios de alto nivel en prestigiosas universidades y nuestra experiencia adquirida en importantes instituciones de los sectores privado y público nos permiten prestar servicios con la mejor calidad en nuestras respectivas áreas de especialización.
-      </h1>
-      <hr>
-      <div class="centered-icon text-center">
-        <br>
-        <img src="img/balanza.png" alt="Balanzas">
-      </div>
+  <div id="main4" class="container">
+    <div class="row text-center">
+      <h1 class="text-left">Carrières</h1>
+      <p  class="text-left">
+        Nous sommes à la recherche d'étudiants talentueux, intéressés par une carrière professionnelle exceptionnelle
+        avec nous. Si vous êtes intéressé, merci de nous envoyer un message indiquant vos domaines d'activité ainsi
+        que votre CV.
+      </p>
+      <br>
     </div>
-  </div>
-
-
-  <div id="center" class="container">
+    <br><br>
     <div class="row">
-      <p>Además, estamos calificados para brindar asesoría en los idiomas español, inglés, francés, italiano, alemán y húngaro.</p>
-    </div>
-    <div class="row">
-      <div class="col-md-12 col-offset-md-2">
-        <?php
-          foreach ($all_recs as $item => $row) {
-            ?>
-            <div class="col-md-4">
-              <a href="cv.php?nombre=<?php echo $row['nombre'] ?>">
-                <div class="blue">
-                <div style="display:none" class="overlay"><span class="name"><?php echo $row['nombre']?></span></div>
-                <img width="100%" height="100%" src="../admin/uploads/<?php echo $row['foto']?> ">
-              </div>
-              </a>
+      <div style="padding-left:0px;margin:0px;padding-right:10px;"  class="col-md-6">
+        <form id="oportunidad_form" class="form-horizontal" role="form" action="enviarOportunidades.php" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="nombre" class="col-sm-2 control-label">Nom*</label>
+            <div class="col-sm-10">
+              <input required type="text" class="form-control" name="nombre" id="nombre">
             </div>
-            <?php
-          }
-        ?>
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">Courriel*</label>
+            <div class="col-sm-10">
+              <input required type="email" class="form-control" name="email" id="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="comentario" class="col-sm-3 control-label">Commentaires</label>
+            <div class="col-sm-9">
+              <textarea class="form-control" name="comentario" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cv" class="col-sm-2 control-label">CV*</label>
+            <div class="col-sm-10">
+              <input required type="file" class="form-control" name="cv" id="cv" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">Envoyer</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6 oportunidades">
       </div>
     </div>
   </div>
-
-  <br><br>
   <?php include('common/footer.php') ?>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script>
-  $('.blue').mouseover(function (e){
-    $(this).find('.overlay').show();
-  })
-  $('.blue2').mouseover(function (e){
-    $(this).find('.overlay').show();
-  })
-  $('.blue').mouseout(function (e){
-    $(this).find('.overlay').hide();
-  })
-  $('.blue2').mouseout(function (e){
-    $(this).find('.overlay').hide();
+  $("#oportunidad_form").submit(function(e){
+    $(".overlay_bg").show();
+    return true;
   })
   </script>
 

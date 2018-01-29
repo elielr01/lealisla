@@ -9,7 +9,8 @@ while ($row = $q->fetch()){
   $all_recs[]=array(
     'id'  	   => $row['idTag'],
     'tag'      => $row['tag'],
-    'tag_en'   => $row['tag_en']
+    'tag_en'   => $row['tag_en'],
+    'tag_fr'   => $row['tag_fr']
   );
 }
 echo json_encode($all_recs);

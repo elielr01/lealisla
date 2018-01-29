@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="title" content="Leal Isla y Horváth , S.C. Abogados"/>
   <meta name="subject" content="Leal Isla y Horváth , S.C. Abogados"/>
-  <meta name="description" content="Monterrey-based law firm specialized in advising domestic and foreign companies and in providing effective solutions to their legal issues."/>
-  <meta name="keywords" content="Leal Isla, Horváth, Lawyer"/>
+  <meta name="description" content="Despacho de abogados con sede en Monterrey especializado en brindar consultoría a empresas nacionales y extranjeras y en proponer  soluciones efectivas a sus problemas legales."/>
+  <meta name="keywords" content="Leal Isla, Horváth, Abogados"/>
   <meta name="revisit" content="1 day"/>
   <meta name="distribution" content="global"/>
   <title>LEAL ISLA &amp; HORVÁTH, S.C.  Abogados</title>
@@ -16,13 +16,13 @@
   <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
   <meta property="og:image" content="http://lealisla.com/img/Lawyer.jpg">
   <meta property="og:title" content="Leal Isla y Horváth , S.C. Abogados"/>
-  <meta property="og:description" content="Monterrey-based law firm specialized in advising domestic and foreign companies and in providing effective solutions to their legal issues.">
+  <meta property="og:description" content="Despacho de abogados con sede en Monterrey especializado en brindar consultoría a empresas nacionales y extranjeras y en proponer  soluciones efectivas a sus problemas legales.">
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-  <script>
+    <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -32,31 +32,22 @@
       ga('send', 'pageview');
 
     </script>
+  <style>
+
+  </style>
 </head>
 
 <body>
 
   <div style="display:none" class="overlay_bg text-center">
-    <p class="overlay_content">Sending...</p>
+    <p class="overlay_content">Envoi...</p>
   </div>
 
   <div class="container">
-    <div class="masthead">
-      <div class="text-muted"><img src="img/logo.jpg"><p class="pull-right"><a class="details3" href="es">Spanish</a></p></div>
-      <br>
-      <nav>
-        <ul class="nav nav-justified">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="mission.html">Mission</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="members.php">Members</a></li>
-          <li><a href="tradition.html">Tradition</a></li>
-          <li><a href="opportunities.html">Opportunities</a></li>
-          <li><a href="news.html">News</a></li>
-          <li class="active"><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <?php include('common/header.php')?>
+    <script>
+      document.getElementById('navContact').classList.add("active");
+    </script>
   </div>
 
 
@@ -69,46 +60,47 @@
     <div class="row">
       <div style="padding-left:0px;margin:0px;padding-right:10px;"  class="col-md-6">
         <p>
-           Ave David Alfaro Siqueiros No.106 (Torre Koi)
-          <br> Piso 18, Despacho 1801, Colonia Valle Oriente
-           <br>San Pedro Garza García, N.L. México, C.P. 66269
-           <br>Tel. (52-81) 8865-4385 / 1500 9187 
+          Ave David Alfaro Siqueiros No.106 (Torre Koi)
+          <br>Piso 18, Despacho 1801, Colonia Valle Oriente
+          <br>San Pedro Garza García, N.L. México, 66269
+          <br>Tel. (52-81) 8865-4385
 
           <br><br>Lic. Beatriz Leal-Isla Garza
-          <br>Public Relations Manager
+          <br>Gerente de Relaciones Públicas
           <br>beatriz@lealisla.com.mx
 
-          <br><br>To contact us, please fill in the following form:
+          <br><br>Pour nous contacter, merci de remplir le formulaire suivant:
+          <br>ou vous pouvez écrire à <span class="underline">info@lealisla.com.mx</span>
           <br><br>
         </p>
         <form id="contacto_form" class="form-horizontal" role="form">
           <div class="form-group">
-            <label for="nombre" class="col-sm-2 control-label">Name*</label>
+            <label for="nombre" class="col-sm-2 control-label">Nom*</label>
             <div class="col-sm-10">
               <input required type="text" class="form-control" id="nombre" name="nombre">
             </div>
           </div>
           <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Email*</label>
+            <label for="email" class="col-sm-2 control-label">Courriel*</label>
             <div class="col-sm-10">
               <input required type="email" class="form-control" id="email" name="email">
             </div>
           </div>
           <div class="form-group">
-            <label for="comentario" class="col-sm-2 control-label">Comments* </label>
-            <div class="col-sm-10">
+            <label for="comentario" class="col-sm-3 control-label">Commentaires* </label>
+            <div class="col-sm-9">
               <textarea required class="form-control" rows="3" id="comentario" name="comentario"></textarea>
             </div>
           </div>
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-              <button type="submit" class="btn btn-default">Submit</button>
+              <button type="submit" class="btn btn-default">Envoyer</button>
             </div>
           </div>
         </form>
         <div style="display:none" id="oportunidad_alert" class="alert alert-info alert-dismissible" role="alert">
           <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          We have received your email, we will contact you soon.
+          Hemos recibido su mensaje, en breve nos comunicaremos.
         </div>
       </div>
       <div style="padding-left:0px;margin:0px;padding:0px;" class="col-md-6">
@@ -116,39 +108,7 @@
       </div>
     </div>
   </div>
-
-
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div id="left" class="col-md-3">
-          <p class="text-center">
-            <br>
-            MTY-MX<br>
-           Ave David Alfaro Siqueiros No.106 (Torre Koi)<br>
-           Piso 18, Despacho 1801, Colonia Valle Oriente<br>
-           San Pedro Garza García, N.L. México, C.P. 66269<br>
-           Tel. (52-81) 8865-4385 / 1500 9187<br>
-          </p>
-        </div>
-        <div class="col-sm-6 text-center">
-          <span>PROUD MEMBER OF</span>
-          <br>
-          <img src="img/icc.png">
-          <img src="img/chambers.png">
-          <img src="img/wwl.png">
-        </div>
-        <div id="right" class="col-md-3 text-right">
-          <br>
-          <br>
-          <p class="uppercase">Leal Isla & Horváth, S.C.</p>
-          <a href="avisodeprivacidad.html" class="details">PRIVACY NOTICE</a>
-          <p class="footer_names">WEBSITE BY: ANDREA RAMÍREZ & JAVIER ESQUIVEL
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <?php include('common/footer.php') ?>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -176,7 +136,7 @@
         }
         else
         {
-          alert("An error has occurred, please try again later.");
+          alert("Ha ocurrido un error, favor de volver a intentar.");
         }
       }
     });

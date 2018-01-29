@@ -22,7 +22,7 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-  <script>
+      <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -32,96 +32,45 @@
       ga('send', 'pageview');
 
     </script>
-  <style>
-
-  </style>
 </head>
 
 <body>
 
 
   <div class="container">
-    <div class="masthead">
-      <div class="text-muted"><img src="img/logo.jpg"><p class="pull-right"><a href="/"class="details3">English</a></p></div>
-      <br>
-      <nav>
-        <ul class="nav nav-justified">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="mision.html">Misión</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="miembros.php">Miembros</a></li>
-          <li><a href="tradicion.html">Tradición</a></li>
-          <li><a href="oportunidades.html">Oportunidades</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
+    <?php include('common/header.php')?>
+    <script>
+      document.getElementById('navTradition').classList.add("active");
+    </script>
   </div>
 
 
-
-  <div id="main4" class="container text-center overlay2">
+  <div id="main3" class="container text-center overlay2">
     <div class="row">
-      <h1 class="text-left">Aviso de Privacidad</h1>
-      <p id="aviso" class="text-left">
-
-      </p>
-      <p class="text-left">
-        <br><br><span class="creacion">Fecha última actualización <span id="t_c"></span></span>
+      <h1 class="text-left">Tradition</h1>
+      <p  class="text-left">
+        <br>
+        <span class="leal_bold">LEAL ISLA</span> est un nom issu d'une tradition à Monterrey. Cela a commencé avec
+        Carlos Leal Isla, qui a pratiqué, avec succès, le droit de la fin du XIXème siècle jusqu'aux années 1930.
+        Son activité a été perpétuée par ses fils, Rodolfo et Rubén Leal Isla, le premier en tant que juge, procureur
+        général et juge de la Cour suprême de l'État du Nuevo León ; et le second en tant que juge puis notaire public
+        numéro 8 à Monterrey, de 1942 à 1980 : il a été suivi à ce poste par Rubén Leal Isla Macías jusqu'en 1994.
+        Aujourd'hui il existe plusieurs avocats dont le nom est Leal Isla à Monterrey.
+        <br><br>
+        Après plus de 100 ans de présence continue dans le domaine juridique de l'État, le nom est alors consolidé
+        suite à la création du cabinet LEAL ISLA & HORVÁTH, liant ainsi tradition et internationalité.
       </p>
       <br>
     </div>
   </div>
 
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div id="left" class="col-md-3">
-          <p class="text-center">
-            <br>
-            MTY-MX<br>
-            Blvd. Díaz Ordaz 140,<br>
-            Torre II, Piso 20, Col. Santa María<br>
-            C.P. 64650<br>
-            T. (52-81) 8315 4238
-          </p>
-        </div>
-        <div class="col-sm-6 text-center">
-          <span>ORGULLOSAMENTE MIEMBRO DE</span>
-          <br>
-          <img src="img/icc.png">
-          <img src="img/chambers.png">
-          <img src="img/wwl.png">
-        </div>
-        <div id="right" class="col-md-3 text-right">
-          <br>
-          <br>
-          <p class="uppercase">Leal Isla & Horváth, S.C.</p>
-          <a href="avisodeprivacidad.html" class="details">AVISO DE PRIVACIDAD</a>
-          <p class="footer_names">WEBSITE POR: ANDREA RAMÍREZ & JAVIER ESQUIVEL
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="image_fondo">
 
+  </div>
+  <?php include('common/footer.php') ?>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script>
-  $.ajax({
-    type:'GET',
-    dataType: 'json',
-    url:'../admin/lib/obtenerAviso.php',
-    success: function(data) {
-      if(data.length >0 ) {
-        $("#aviso").html(data[0].aviso);
-        $("#t_c").html(data[0].modificado);
-      }
-    }
-  });
-  </script>
 
 </body>
 </html>

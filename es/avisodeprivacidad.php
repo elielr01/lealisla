@@ -1,19 +1,3 @@
-<?php
-include("../admin/lib/conex.php");
-$db= Conectarse();
-$all_recs = array();
-$sql = "SELECT * FROM empleado ORDER BY idTipo, nombre";
-$q = $db->prepare($sql);
-$q->execute(array());
- while ($row = $q->fetch()){
-  $all_recs[]=array(
-    'id'       => $row['idempleado'],
-    'nombre'   => $row['nombre'],
-    'foto'     => $row['foto'],
-    'tipo'     => $row['idTipo']
-  );
-}
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -38,7 +22,7 @@ $q->execute(array());
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-      <script>
+    <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -48,76 +32,48 @@ $q->execute(array());
       ga('send', 'pageview');
 
     </script>
+  <style>
+
+  </style>
 </head>
 
 <body>
 
+
   <div class="container">
-    <?php include('common/header.php')?>
-    <script>
-      document.getElementById('navMembers').classList.add("active");
-    </script>
+    <?php include('common/header.php') ?>
   </div>
 
 
 
-  <div id="main" class="container">
+  <div id="main4" class="container text-center overlay2">
     <div class="row">
-      <hr>
-      <h1 class="text-center">
-        Nuestros estudios de alto nivel en prestigiosas universidades y nuestra experiencia adquirida en importantes instituciones de los sectores privado y público nos permiten prestar servicios con la mejor calidad en nuestras respectivas áreas de especialización.
-      </h1>
-      <hr>
-      <div class="centered-icon text-center">
-        <br>
-        <img src="img/balanza.png" alt="Balanzas">
-      </div>
+      <h1 class="text-left">Aviso de Privacidad</h1>
+      <p id="aviso" class="text-left">
+
+      </p>
+      <p class="text-left">
+        <br><br><span class="creacion">Fecha última actualización <span id="t_c"></span></span>
+      </p>
+      <br>
     </div>
   </div>
-
-
-  <div id="center" class="container">
-    <div class="row">
-      <p>Además, estamos calificados para brindar asesoría en los idiomas español, inglés, francés, italiano, alemán y húngaro.</p>
-    </div>
-    <div class="row">
-      <div class="col-md-12 col-offset-md-2">
-        <?php
-          foreach ($all_recs as $item => $row) {
-            ?>
-            <div class="col-md-4">
-              <a href="cv.php?nombre=<?php echo $row['nombre'] ?>">
-                <div class="blue">
-                <div style="display:none" class="overlay"><span class="name"><?php echo $row['nombre']?></span></div>
-                <img width="100%" height="100%" src="../admin/uploads/<?php echo $row['foto']?> ">
-              </div>
-              </a>
-            </div>
-            <?php
-          }
-        ?>
-      </div>
-    </div>
-  </div>
-
-  <br><br>
   <?php include('common/footer.php') ?>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script>
-  $('.blue').mouseover(function (e){
-    $(this).find('.overlay').show();
-  })
-  $('.blue2').mouseover(function (e){
-    $(this).find('.overlay').show();
-  })
-  $('.blue').mouseout(function (e){
-    $(this).find('.overlay').hide();
-  })
-  $('.blue2').mouseout(function (e){
-    $(this).find('.overlay').hide();
-  })
+  $.ajax({
+    type:'GET',
+    dataType: 'json',
+    url:'../admin/lib/obtenerAviso.php',
+    success: function(data) {
+      if(data.length >0 ) {
+        $("#aviso").html(data[0].aviso);
+        $("#t_c").html(data[0].modificado);
+      }
+    }
+  });
   </script>
 
 </body>

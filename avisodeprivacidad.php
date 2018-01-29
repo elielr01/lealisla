@@ -38,22 +38,7 @@
 
 
   <div class="container">
-    <div class="masthead">
-      <div class="text-muted"><img src="img/logo.jpg"><p class="pull-right"><a class="details3" href="es">Spanish</a></p></div>
-      <br>
-      <nav>
-        <ul class="nav nav-justified">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="mission.html">Mission</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="members.php">Members</a></li>
-          <li><a href="tradition.html">Tradition</a></li>
-          <li><a href="opportunities.html">Opportunities</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <?php include('common/header') ?>
   </div>
 
 
@@ -70,37 +55,7 @@
     </div>
   </div>
 
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div id="left" class="col-md-3">
-          <p class="text-center">
-            <br>
-            MTY-MX<br>
-            Blvd. Díaz Ordaz 140,<br>
-            Torre II, Piso 20, Col. Santa María<br>
-            C.P. 64650<br>
-            T. (52-81) 8315 4238
-          </p>
-        </div>
-        <div class="col-sm-6 text-center">
-          <span>PROUD MEMEMBER OF</span>
-          <br>
-          <img src="img/icc.png">
-          <img src="img/chambers.png">
-          <img src="img/wwl.png">
-        </div>
-        <div id="right" class="col-md-3 text-right">
-          <br>
-          <br>
-          <p class="uppercase">Leal Isla & Horváth, S.C.</p>
-          <a href="avisodeprivacidad.html" class="details">PRIVACY NOTICE</a>
-          <p class="footer_names">WEBSITE BY: ANDREA RAMÍREZ & JAVIER ESQUIVEL
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <?php include('common/footer.php') ?>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

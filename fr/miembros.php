@@ -10,7 +10,7 @@ $q->execute(array());
     'id'       => $row['idempleado'],
     'nombre'   => $row['nombre'],
     'foto'     => $row['foto'],
-    'tipo'     => $row['tipo']
+    'tipo'     => $row['idTipo']
   );
 }
 ?>
@@ -53,22 +53,10 @@ $q->execute(array());
 <body>
 
   <div class="container">
-    <div class="masthead">
-      <div class="text-muted"><img src="img/logo.jpg"><p class="pull-right"><a href="/"class="details3">English</a></p></div>
-      <br>
-      <nav>
-        <ul class="nav nav-justified">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="mision.html">Misión</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li class="active"><a href="miembros.php">Miembros</a></li>
-          <li><a href="tradicion.html">Tradición</a></li>
-          <li><a href="oportunidades.html">Oportunidades</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
+    <?php include('common/header.php')?>
+    <script>
+      document.getElementById('navMembers').classList.add("active");
+    </script>
   </div>
 
 
@@ -77,7 +65,9 @@ $q->execute(array());
     <div class="row">
       <hr>
       <h1 class="text-center">
-        Nuestros estudios de alto nivel en prestigiosas universidades y nuestra experiencia adquirida en importantes instituciones de los sectores privado y público nos permiten prestar servicios con la mejor calidad en nuestras respectivas áreas de especialización.
+        Notre formation de haut niveau, grâce à des universités de pointe, ainsi que l'expérience que nous avons acquis
+        à travers d'importantes institutions des secteurs privé et public, nous permettent d'offrir des services de la
+        plus grande qualité dans nos domaines de spécialisation respectifs.
       </h1>
       <hr>
       <div class="centered-icon text-center">
@@ -90,7 +80,10 @@ $q->execute(array());
 
   <div id="center" class="container">
     <div class="row">
-      <p>Además, estamos calificados para brindar asesoría en los idiomas español, inglés, francés, italiano, alemán y húngaro.</p>
+      <p>
+        En outre, nous disposons des compétences pour pouvoir conseiller nos clients en espagnol, anglais, français,
+        italien, allemand et hongrois.
+      </p>
     </div>
     <div class="row">
       <div class="col-md-12 col-offset-md-2">
@@ -111,44 +104,8 @@ $q->execute(array());
       </div>
     </div>
   </div>
-
   <br><br>
-
-
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div id="left" class="col-md-3">
-          <p class="text-center">
-            <br>
-            MTY-MX<br>
-           Ave David Alfaro Siqueiros No.106 (Torre Koi)<br>
-           Piso 18, Despacho 1801, Colonia Valle Oriente<br>
-           San Pedro Garza García, N.L. México, C.P. 66269<br>
-           Tel. (52-81) 8865-4385 / 1500 9187 <br>  
-          </p>
-        </div>
-        <div class="col-sm-6 text-center">
-          <span>ORGULLOSAMENTE MIEMBRO DE</span>
-          <br>
-          <img src="img/icc.png">
-          <img src="img/chambers.png">
-          <img src="img/wwl.png">
-        </div>
-        <div id="right" class="col-md-3 text-right">
-          <br>
-          <br>
-          <p class="uppercase">Leal Isla & Horváth, S.C.</p>
-          <a href="avisodeprivacidad.html" class="details">AVISO DE PRIVACIDAD</a>
-          <p class="footer_names">WEBSITE POR: ANDREA RAMÍREZ & JAVIER ESQUIVEL
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
+  <?php include('common/footer.php') ?>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>

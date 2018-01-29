@@ -41,22 +41,7 @@
 
 
   <div class="container">
-    <div class="masthead">
-      <div class="text-muted"><img src="img/logo.jpg"><p class="pull-right"><a href="/"class="details3">English</a></p></div>
-      <br>
-      <nav>
-        <ul class="nav nav-justified">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="mision.html">Misión</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="miembros.php">Miembros</a></li>
-          <li><a href="tradicion.html">Tradición</a></li>
-          <li><a href="oportunidades.html">Oportunidades</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
+    <?php include('common/header.php') ?>
   </div>
 
 
@@ -73,39 +58,7 @@
       <br>
     </div>
   </div>
-
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div id="left" class="col-md-3">
-          <p class="text-center">
-            <br>
-            MTY-MX<br>
-            Blvd. Díaz Ordaz 140,<br>
-            Torre II, Piso 20, Col. Santa María<br>
-            C.P. 64650<br>
-            T. (52-81) 8315 4238
-          </p>
-        </div>
-        <div class="col-sm-6 text-center">
-          <span>ORGULLOSAMENTE MIEMBRO DE</span>
-          <br>
-          <img src="img/icc.png">
-          <img src="img/chambers.png">
-          <img src="img/wwl.png">
-        </div>
-        <div id="right" class="col-md-3 text-right">
-          <br>
-          <br>
-          <p class="uppercase">Leal Isla & Horváth, S.C.</p>
-          <a href="avisodeprivacidad.html" class="details">AVISO DE PRIVACIDAD</a>
-          <p class="footer_names">WEBSITE POR: ANDREA RAMÍREZ & JAVIER ESQUIVEL
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <?php include('common/footer.php') ?>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>

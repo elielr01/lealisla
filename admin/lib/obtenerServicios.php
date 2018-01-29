@@ -5,6 +5,7 @@ $all_recs = array();
 $sql = "SELECT * FROM servicio order by servicio";
 $q = $db->prepare($sql);
 $q->execute(array());
+
 while ($row = $q->fetch()){
   $all_recs[]=array(
     'id'  	      => $row['idServicio'],

@@ -1,0 +1,153 @@
+[
+  {
+    "idServicio": "3",
+    "servicio": "Laboral",
+    "servicioEn": "Labor Law",
+    "servicioFr": "Droit du travail",
+    "foto": "Z5VXhkGDyS.jpeg",
+    "detallesFr":
+    [
+      "Plans de rémunération et régimes d'avantages sociaux des dirigeants",
+      "Conseil sur les stratégies de lutte contre la discrimination dans l'emploi",
+      "Conseil sur le régime de sous-traitance",
+      "Résiliations et accords",
+      "Contentieux individuel et collectif du travail",
+      "Élaboration de règlements intérieurs",
+      "Élaboration des documents de travail",
+      "Conseil sur les relations de travail internationales",
+      "Négociation avec les syndicats",
+      "Négociation et rédaction de contrats individuels et collectifs de travail",
+      "Conseil sur les questions liées au travail"
+    ]
+  },
+  {
+    "idServicio": "4",
+    "servicio": "Corporativo y Transaccional",
+    "servicioEn": "Corporate and Transactional",
+    "servicioFr": "Corporatif et transactionnel",
+    "foto": "cYLyHxSdGN.jpeg",
+    "detallesFr":
+    [
+      "Plans de rémunération des dirigeants",
+      "Conseil en opérations sur titres : pouvoirs, augmentations et réductions de capital, modification des statuts, transformations, etc.",
+      "Négociation et élaboration de contrats et opérations commerciales nationaux et internationaux",
+      "Audits et due diligence",
+      "Restructuration d'entreprise",
+      "Fusions-acquisitions",
+      "Gestion des documents d'entreprise",
+      "Conseil sur les transactions nationales et internationales"
+    ]
+  },
+  {
+    "idServicio": "5",
+    "servicio": "Cumplimiento Regulatorio",
+    "servicioEn": "Corporate Compliance",
+    "servicioFr": "Conformité réglementaire",
+    "foto": "FWTtGSkuIf.jpeg",
+    "detallesFr":
+    [
+      "Formation du personnel en vue du respect du cadre réglementaire spécifique (investissement étranger, migration, financier, etc.)",
+      "Conseil et formation liés à la réglementation relative à la prévention du blanchiment d'argent",
+      "Conseil et formation sur les normes anti-corruption nationales et étrangères",
+      "Élaboration de codes de conduite ou de codes d'éthique",
+      "Audits et due diligence pour vérifier la conformité réglementaire spécifique"
+    ]
+  },
+  {
+    "idServicio": "6",
+    "servicio": "Datos Personales y Tecnologías de la Información",
+    "servicioEn": "Personal data and Information Technologies",
+    "servicioFr": "Données personnelles et technologies de l'information",
+    "foto": "5IE0rjVWcq.jpeg",
+    "detallesFr":
+    [
+      "Conseil en commerce électronique (e-commerce)",
+      "Procédures administratives et judiciaires liées à la protection des données personnelles",
+      "Élaboration de règlements intérieurs et formation en vue du respect de la réglementation applicable",
+      "Conseil sur la mise en œuvre de la réglementation relative à la protection des données personnelles ",
+      "Élaboration d'avis de confidentialité et de documents de conformité",
+      "Conseil sur les données personnelles et sur la conformité réglementaire"
+    ]
+  },
+  {
+    "idServicio": "7",
+    "servicio": "Derecho Energético",
+    "servicioEn": "Energy Law",
+    "servicioFr": "Droit de l'énergie",
+    "foto": "0TEozWSe7H.jpeg",
+    "detallesFr":
+    [
+      "Médiation et arbitrage pour le règlement des différends en matière énergétique",
+      "Élaboration et négociation de contrats",
+      "Conseil sur les projets énergétiques"
+    ]
+  },
+  {
+    "idServicio": "8",
+    "servicio": "Capital Privado",
+    "servicioEn": "Private Equity",
+    "servicioFr": "Private equity",
+    "foto": "3mKkN28WgY.jpeg",
+    "detallesFr":
+    [
+      "Conseil sur l'investissement d'impact",
+      "Conseil sur les transactions de capital-investissement et de capital-risque",
+      "Représentation et conseil auprès des holdings (sociétés de portefeuille)",
+      "Conseil en financement structuré",
+      "Conseil sur la constitution de fonds de capital-investissement et de capital-risque"
+    ]
+  },
+  {
+    "idServicio": "9",
+    "servicio": "Gestión Patriomonial",
+    "servicioEn": "Wealth Management",
+    "servicioFr": "Gestion de patrimoine",
+    "foto": "w1onVxemdZ.jpeg",
+    "detallesFr":
+    [
+      "Conseil en successions",
+      "Élaboration de protocoles familiaux",
+      "Conception, élaboration et révision de fiducies",
+      "Conception et organisation de la succession",
+      "Conseil en planification successorale"
+    ]
+  },
+  {
+    "idServicio": "10",
+    "servicio": "Inmobiliario",
+    "servicioEn": "Real Estate",
+    "servicioFr": "Immobilier",
+    "foto": "GVztQ1AsdX.jpeg",
+    "detallesFr":
+    [
+      "Fiducies",
+      "Négociation et rédaction de contrats de location, de construction, d'acquisition ou de vente",
+      "Conseil sur l'acquisition, la vente et la location de biens immobiliers"
+    ]
+  },
+  {
+    "idServicio": "11",
+    "servicio": "Litigio y Medios Alternos de Resolución de Controversias",
+    "servicioEn": "Litigation and Alternate Methods for Dispute Resolution",
+    "servicioFr": "Contentieux et modes alternatifs de règlement des conflits",
+    "foto": "LNjOmI6s0a.jpeg",
+    "detallesFr":
+    [
+      "Mécanisme Amparo",
+      "Négociation, médiation et conciliation",
+      "Représentation dans les arbitrages commerciaux nationaux et internationaux",
+      "Représentation dans les procédures civiles, commerciales et relatives au droit du travail."
+    ]
+  },
+  {
+    "idServicio": "12",
+    "servicio": "Migratorio",
+    "servicioEn": "Immigration",
+    "servicioFr": "Immigration",
+    "foto": "N8GVe6WQkf.jpeg",
+    "detallesFr":
+    [
+      "Conseil et gestion des questions relatives à l'immigration"
+    ]
+  }
+]

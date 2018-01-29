@@ -33,58 +33,46 @@
 
 
   <div class="container">
-    <div class="masthead">
-      <div class="text-muted"><img src="img/logo.jpg"><p class="pull-right"><a href="/"class="details3">English</a></p></div>
-      <br>
-      <nav>
-        <ul class="nav nav-justified">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="mision.html">Misión</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="miembros.php">Miembros</a></li>
-          <li><a href="tradicion.html">Tradición</a></li>
-          <li><a href="oportunidades.html">Oportunidades</a></li>
-          <li class="active"><a href="noticias.html">Noticias</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
+    <?php include('common/header.php')?>
+    <script>
+      document.getElementById('navNews').classList.add("active");
+    </script>
   </div>
 
 
   <div id="main2" class="container">
     <div class="row">
       <div class="col col-md-8">
-        <h1 class="text-left">Noticias</h1>
+        <h1 class="text-left">Actualités</h1>
         <div id="noticias">
         </div>
       </div>
       <div class="col-md-4">
         <div class="serach_box_news">
           <div class="search_header">
-            Buscador
+            Recherche
           </div>
           <div class="search_body">
-          <p>1. Buscar por fecha</p>
+          <p>1. Rechercher par date</p>
           <form action="search.php" method="GET">
             <div class="form-group">
-              <input type="text" class="form-control" name="inicio" id="inicio" placeholder="Fecha Inicio">
+              <input type="text" class="form-control" name="inicio" id="inicio" placeholder="Date de début">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" name="fin" id="fin" placeholder="Fecha Fin">
+              <input type="text" class="form-control" name="fin" id="fin" placeholder="Date de fin">
             </div>
             <input type="hidden" name="type" value="1">
-            <button type="submit" class="btn btn-default">Buscar</button>
+            <button type="submit" class="btn btn-default">Recherche</button>
           </form>
           <hr class="black_hr">
-          <p>2. Buscar por tema</p>
+          <p>2. Recherche par sujet</p>
           <form action="search.php" method="GET">
             <input type="hidden" name="type" value="2">
             <div class="form-group">
             <select id="tags_search" name="tags[]" class="form-control" multiple="multiple">
             </select>
             </div>
-            <button type="submit" class="btn btn-default">Buscar</button>
+            <button type="submit" class="btn btn-default">Recherche</button>
           </form>
           </div>
         </div>
@@ -92,38 +80,7 @@
     </div>
   </div>
   <br><br>
-
-    <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div id="left" class="col-md-3">
-            <p class="text-center">
-              <br>
-              MTY-MX<br>
-           Ave David Alfaro Siqueiros No.106 (Torre Koi)<br>
-           Piso 18, Despacho 1801, Colonia Valle Oriente<br>
-           San Pedro Garza García, N.L. México, C.P. 66269<br>
-           Tel. (52-81) 8865-4385 / 1500 9187 <br>  
-            </p>
-          </div>
-          <div class="col-sm-6 text-center">
-            <span>ORGULLOSAMENTE MIEMBRO DE</span>
-            <br>
-            <img src="img/icc.png">
-            <img src="img/chambers.png">
-            <img src="img/wwl.png">
-          </div>
-          <div id="right" class="col-md-3 text-right">
-            <br>
-            <br>
-            <p class="uppercase">Leal Isla & Horváth, S.C.</p>
-            <a href="avisodeprivacidad.html" class="details">AVISO DE PRIVACIDAD</a>
-            <p class="footer_names">WEBSITE POR: ANDREA RAMÍREZ & JAVIER ESQUIVEL
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <?php include('common/footer.php') ?>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -138,7 +95,7 @@
         url:'../admin/lib/obtenerTags.php',
         success: function(data) {
           for (var i = 0; i < data.length; i++) {
-            $('#tags_search').append("<option value="+data[i].id+">"+data[i].tag+"</option>");
+            $('#tags_search').append("<option value="+data[i].id+">"+data[i].tag_fr+"</option>");
           };
           $('#tags_search').multiselect();
         }

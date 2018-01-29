@@ -39,22 +39,10 @@
 
 
   <div class="container">
-    <div class="masthead">
-      <div class="text-muted"><img src="img/logo.jpg"><p class="pull-right"><a href="/"class="details3">English</a></p></div>
-      <br>
-      <nav>
-        <ul class="nav nav-justified">
-          <li class="active" href="index.html"><a href="#">Inicio</a></li>
-          <li><a href="mision.html">Misión</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="miembros.php">Miembros</a></li>
-          <li><a href="tradicion.html">Tradición</a></li>
-          <li><a href="oportunidades.html">Oportunidades</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
+    <?php include('common/header.php')?>
+    <script>
+      document.getElementById('navHome').classList.add("active");
+    </script>
 
 
     <div id="landing">
@@ -70,16 +58,18 @@
         <div class="row">
           <div id="image-text" class="col-md-12">
             <div id="desc1" class="text-center description-text">
-              Para ayudar a nuestros clientes nos enfocamos en entender sus necesidades específicas.
+              Pour accompagner nos clients, nous nous focalisons sur la compréhension de leur besoins précis.
             </div>
             <div id="desc2" style="display:none" class="text-center description-text">
-              Nos consideramos no sólo abogados de nuestros clientes, sino además parte integrante de su equipo.
+              Nous nous considérons non seulement comme les avocats de nos clients, mais aussi comme des membres à
+              part entière de leur équipe.
             </div>
             <div id="desc3" style="display:none"  class="text-center description-text">
-              Para ayudar a nuestros clientes nos enfocamos en entender sus necesidades específicas.
+              Pour accompagner nos clients, nous nous focalisons sur la compréhension de leur besoins précis.
             </div>
             <div id="desc4" style="display:none" class="text-center description-text">
-              Nos consideramos no sólo abogados de nuestros clientes, sino además parte integrante de su equipo.
+              Nous nous considérons non seulement comme les avocats de nos clients, mais aussi comme des membres à
+              part entière de leur équipe.
             </div>
           </div>
         </div>
@@ -87,13 +77,23 @@
 
       <div class="row">
         <div class="col-md-8">
-          <h2>Misión</h2>
+          <h2>Mission</h2>
           <hr>
           <hr>
-          <p class="text-justify">Consideramos al abogado como un aliado esencial del cliente para la adecuada conducción de sus negocios, por lo que nuestra principal misión consiste en encontrar estrategias legales que permitan a nuestros clientes llevar a cabo sus actividades empresariales siempre yendo un paso adelante. <br><br> Estamos convencidos de que nuestros clientes son el centro de nuestra actividad y por ello enfocamos todos nuestros conocimientos y esfuerzos en otorgarles el mejor servicio, cuidando de hacerlo con la mejor calidad. Conscientes del fuerte compromiso que esto representa, desempeñamos nuestra profesión con un alto nivel de responsabilidad y entusiasmo. Nos esmeramos permanentemente en que nuestros clientes sientan confianza en la asesoría que reciben de nosotros.</p>
+          <p class="text-justify">
+            Nous considérons l'avocat comme un allié essentiel du client, afin que celui-ci puisse mener son activité
+            de manière satisfaisante. Ainsi, notre mission principale est de trouver les meilleures stratégies
+            juridiques permettant à nos clients de mener à bien leurs activités entrepreneuriales
+            <br><br>
+            Nous sommes convaincus que nos clients sont au centre de notre activité, c'est pourquoi nous concentrons
+            tous nos efforts et connaissances afin de leur offrir les meilleurs services, en prenant le soin de le
+            faire avec la meilleure qualité. Conscients de l'importance de l'engagement que cela représente, nous
+            pratiquons notre profession avec une grande responsabilité et avec enthousiasme. Nous faisons de notre
+            mieux pour que nos clients aient confiance dans les conseils qu'ils reçoivent de notre part.
+          </p>
         </div>
         <div class="col-md-4">
-          <h2>Últimas Noticias</h2>
+          <h2>Dernières actualités</h2>
           <hr>
           <div id="noticias_a" class="text-justify">
           </div>
@@ -102,41 +102,7 @@
     </div>
   </div> <!-- /container -->
 
-  <br><br>
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div id="left" class="col-md-3">
-          <p class="text-center">
-            <br>
-            MTY-MX<br>
-              Ave David Alfaro Siqueiros No.106 (Torre Koi),<br>
-              Piso 18,Despacho 1801, Col. Valle Oriente<br>
-              San Pedro Garza García, N.L. México<br>
-              C.P. 66269<br>
-              T. (52-81) 8865 4385 / 1500 9187
-            </p>
-          </div>
-          <div class="col-sm-6 text-center">
-          <span>ORGULLOSAMENTE MIEMBRO DE</span>
-          <br>
-          <img src="img/icc.png">
-          <img src="img/chambers.png">
-          <img src="img/wwl.png">
-        </div>
-        <div id="right" class="col-md-3 text-right">
-          <br>
-          <br>
-          <p class="uppercase">Leal Isla & Horváth, S.C.</p>
-          <a href="avisodeprivacidad.html" class="details">AVISO DE PRIVACIDAD</a>
-          <p class="footer_names">WEBSITE POR: ANDREA RAMÍREZ & JAVIER ESQUIVEL
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
+  <?php include('common/footer.php') ?>
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -188,7 +154,8 @@
     }
   }, 7000);
 
-
+  // This will be unavailable because french news aren't available in the backend
+  /*
   $.ajax({
     type:'GET',
     dataType: 'json',
@@ -196,11 +163,12 @@
     success: function(data) {
       if(data.length >0 ) {
         for (var i = 0; i < 6; i++) {
-          $("#noticias_a").append("<hr><a href=n.php?id="+data[i].id+"><p>"+data[i].titulo+"</p></a>");
+          $("#noticias_a").append("<hr><a href=n.php?id="+data[i].id+"><p>"+data[i].titulo_fr+"</p></a>");
         }
       };
     }
   });
+  */
   </script>
 </body>
 </html>

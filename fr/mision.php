@@ -1,37 +1,3 @@
-<?php
-include("../admin/lib/conex.php");
-$db= Conectarse();
-$all_recs = array();
-$sql = "SELECT * FROM empleado as e JOIN tipo as t WHERE e.idTipo = t.idTipo and e.nombre = ? ORDER BY e.idTipo, e.nombre";
-$q = $db->prepare($sql);
-$q->execute(array($_GET['nombre']));
- while ($row = $q->fetch()){
-  $all_recs[]=array(
-    'id'       => $row['idempleado'],
-    'nombre'   => $row['nombre'],
-    'foto'     => $row['fotoCV'],
-    'tipo'     => $row['tipo'],
-    'email'    => $row['email']
-  );
-}
-$all_recs2 = array();
-$sql = "SELECT *, c.tipo as type FROM empleado as e JOIN cv as c JOIN tipoCV as tc ON tc.idtipoCV=c.tipo WHERE e.idempleado = c.idempleado and e.nombre = ? ORDER BY c.tipo asc, c.idcv desc";
-$q = $db->prepare($sql);
-$q->execute(array($_GET['nombre']));
- while ($row = $q->fetch()){
-  $all_recs2[]=array(
-    'id'       => $row['idempleado'],
-    'nombre'   => $row['nombre'],
-    'foto'     => $row['foto'],
-    'desc'     => $row['descripcion'],
-    'tipo'     => $row['type'],
-    'titulo'   => $row['titulo'],
-    'tipoCV'   => $row['idtipoCV']
-  );
-}
-$all_recs3 = array();
-$all_recs3 = $all_recs2;
-?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -56,7 +22,7 @@ $all_recs3 = $all_recs2;
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script>
+        <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -66,60 +32,52 @@ $all_recs3 = $all_recs2;
       ga('send', 'pageview');
 
     </script>
-    <style>
-
-    </style>
   </head>
 
   <body>
 
 
   <div class="container">
-    <?php include('common/header.php') ?>
-    <script type="text/javascript">
-      document.getElementById('navMembers').classList.add("active");
+    <?php include('common/header.php')?>
+    <script>
+      document.getElementById('navMission').classList.add("active");
     </script>
   </div>
 
 
+
     <div id="main" class="container">
       <div class="row">
-          <h1 class="title text-center"><?php echo $all_recs[0]['nombre']?></h1>
-          <p class="tipo text-center"><?php echo $all_recs[0]['tipo']?></p>
-          <p class="email_t text-center"><?php echo $all_recs[0]['email']?></p>
-          <div class="text-center col-offset-4 col-md-4" style="width:100%;">
-            <img wifth="353" height="446" src="../admin/uploads/<?php echo $all_recs[0]['foto']?>"></img>
+        <br>
+          <hr>
+          <h1 class="text-center">
+            <span class="quotes">“</span>
+            Nous considérons l'avocat comme un allié essentiel du client, afin que celui-ci puisse mener son activité
+            de manière satisfaisante. Ainsi, notre mission principale est de trouver les meilleures stratégies
+            juridiques permettant à nos clients de mener à bien leurs activités entrepreneuriales
+            <span class="quotes">”</span>
+          </h1>
+          <hr>
+          <div class="centered-icon text-center">
+              <br>
+              <img src="img/balanza.png" alt="Balanzas">
           </div>
       </div>
-      <br><br>
-
-      <?php
-      $anterior = 0;
-      foreach ($all_recs2 as $key => $row) {
-        if($anterior != $row['tipoCV'])
-        {
-          ?>
-          <div class="row">
-            <h1 class="title_info"><?php echo utf8_encode($row['titulo']) ?></h1>
-            <ul class="bullets_padding">
-              <?php
-                foreach ($all_recs3 as $key => $row2) {
-                  if($row2['tipoCV'] == $row['tipoCV'])
-                  {
-                    echo "<li>".$row2['desc']."</li>";
-                  }
-                }
-              ?>
-            </ul>
-          </div>
-          <?php
-          $anterior = $row['tipoCV'];
-        }
-      }
-      ?>
     </div>
 
-    <br><br>
+
+    <div id="center" class="container">
+      <div class="row">
+        <p>
+          Nous sommes convaincus que nos clients sont au centre de notre activité, c'est pourquoi nous concentrons
+          tous nos efforts et connaissances afin de leur offrir les meilleurs services, en prenant le soin de le
+          faire avec la meilleure qualité. Conscients de l'importance de l'engagement que cela représente, nous
+          pratiquons notre profession avec une grande responsabilité et avec enthousiasme. Nous faisons de notre
+          mieux pour que nos clients aient confiance dans les conseils qu'ils reçoivent de notre part.
+        </p>
+      </div>
+    </div>
+    <br>
     <?php include('common/footer.php') ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
